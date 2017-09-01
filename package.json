@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "export NODE_ENV='development' && node front-app/webpack-config/build.js",
+    "build": "export NODE_ENV='development'&& node front-app/webpack-config/build.js",
     "start": "node app.js",
-    "dev": "export NODE_ENV='development' && node app.js",
-    "prd": "export NODE_ENV='production' && node app.js"
+    "dev": "export NODE_ENV='development'&& node app.js",
+    "prd": "export NODE_ENV='production'&& node app.js"
   },
   "keywords": [],
   "author": "",
