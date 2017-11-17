@@ -4,10 +4,11 @@
       <el-col :md="3">
         <el-menu>
           <el-menu-item
-            v-for="route in $router.options.routes"
+            v-for="(route,index) in $router.options.routes"
             v-if="!route.hidden"
             :index="route.path"
             @click="click(route.path)"
+            :key="index"
           >
             {{route.name}}
           </el-menu-item>
@@ -37,7 +38,7 @@ export default {
 </script>
 
 <style>
-#app {
-
-}
+  body{
+    margin:0;padding:0;
+  }
 </style>

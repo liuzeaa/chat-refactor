@@ -8,6 +8,11 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+      path:'/',
+      redirect:'/user',
+      hidden:true
+    },
+    {
       path: '/user',
       name: '用户',
       component: user,

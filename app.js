@@ -28,8 +28,6 @@ app.use(cookieParser())
 var user = require('./apps/user')
 app.use('/static', express.static(path.join(__dirname, 'static')))
 
-
-
 app.use(fileUpload())
 app.use('/auth',require('./apps/auth'))
 app.use((req,res,next)=>{
@@ -82,8 +80,8 @@ app.get('/message',(req,res)=>{
     })
 })
 
-
-if (process.env.NODE_ENV == 'development') {
+console.log(process.env.NODE_ENV=='development')
+if (process.env.NODE_ENV=='development') {
     app.set('json spaces', 4);
     var webpackMiddleware = require("webpack-dev-middleware");
 
