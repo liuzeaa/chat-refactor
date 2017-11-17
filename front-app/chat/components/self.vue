@@ -78,7 +78,7 @@
         },
         methods:{
             change(){
-                console.log(this.me.name,this.$store.state.me.name)
+                //console.log(this.me.name,this.$store.state.me.name)
             },
             onSuccess(response){
                 this.temp_logo = response.url

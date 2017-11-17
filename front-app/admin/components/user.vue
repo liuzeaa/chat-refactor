@@ -8,7 +8,7 @@
       </el-table-column>
       <el-table-column
         prop="username"
-        label="用户id"
+        label="用户名"
       >
           <template scope="scope">
             <router-link :to=" 'user/'+scope.row.id ">{{scope.row.username}}</router-link>
@@ -41,6 +41,7 @@
 </template>
 
 <script>
+  import moment from 'moment';
   import {get_all_user} from './user.api'
 export default {
   name: 'hello',
@@ -53,7 +54,9 @@ export default {
   methods:{
 
     fetch(){
-      get_all_user(list=>this.list=list)
+      get_all_user(list=>{
+        this.list = list;
+      })
     }
   },
   mounted(){
@@ -62,23 +65,3 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style>

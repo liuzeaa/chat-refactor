@@ -8,7 +8,7 @@ Vue.config.productionTip = false
 import store from './store/index'
 import router from './router'
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
+import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 /* eslint-disable no-new */
 Vue.use(moment)

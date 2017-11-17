@@ -6,8 +6,9 @@ import router from './router'
 
 Vue.config.productionTip = false
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
-Vue.use(ElementUI)
+import 'element-ui/lib/theme-chalk/index.css'
+import locale from 'element-ui/lib/locale/lang/zh-CN'
+Vue.use(ElementUI,{locale})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
