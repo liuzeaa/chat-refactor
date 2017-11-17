@@ -4,7 +4,17 @@
 
 
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('chat', 'root','liuze828');
+const sequelize = new Sequelize('chat', 'root', 'root', {
+    host: 'localhost',
+    dialect: 'mysql',
+    pool: {
+        max: 5,
+        min: 0,
+        idle: 10000
+    },
+    timezone: '+08:00' //东八时区
+});
+
 
 var redis = require('redis').createClient();
 
@@ -59,7 +69,7 @@ const Relation = sequelize.define('relation',{
 // User.hasMany(User,{as:'son',through:Relation})
 User.belongsToMany(User,{as:'friend',through:Relation})
 
-sequelize.sync()
+//sequelize.sync()
 
 module.exports = {
     User,
